@@ -24,5 +24,19 @@ export const createAnimations = (game) => {
     frames: [{ key: "player", frame: 18 }],
     frameRate: 12,
     repeat: -1,
-  });   
+  });
+  
+  game.anims.create({
+    key: "enemy_walk",
+    frames: game.anims.generateFrameNumbers("enemy", { start: 0, end: 1 }),
+    frameRate: 12,
+    repeat: -1,
+  });
+
+  game.anims.create({
+    key: "enemy_dead",
+    frames: [{ key: "enemy", frame: 2 }],
+    frameRate: 12,
+    repeat: -1,
+  });
 };
