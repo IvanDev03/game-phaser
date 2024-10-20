@@ -107,7 +107,7 @@ function update() {
     player.isDead = true;
     player.anims.play("player_fall", true);
     player.setCollideWorldBounds(false);
-
+    this.sound.play('game-over');
     setTimeout(() => {
       player.setVelocityY(-300);
     }, 100);
